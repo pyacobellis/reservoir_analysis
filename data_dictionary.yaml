@@ -1,0 +1,29 @@
+data_dictionary:
+  datetime:
+    description: Timestamp of measurement
+    type: POSIXct
+    format: "YYYY-MM-DD HH:MM:SS"
+    example: "2016-01-19 00:05:44"
+
+  depth:
+    description: Depth at which measurement was taken
+    type: numeric
+    units: meters
+    example: 6.037
+
+  variable:
+    description: Type of environmental measurement
+    type: categorical
+    categories:
+      - rainfall
+      - dissolved oxygen
+      - evapotranspiration
+      - turbidity
+      - water temperature
+    example: water temperature
+
+  value:
+    description: Recorded value of the environmental variable
+    type: numeric
+    units: varies by variable
+    example: 24.38512
