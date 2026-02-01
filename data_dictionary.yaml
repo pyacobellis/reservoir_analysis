@@ -11,16 +11,28 @@ data_dictionary:
     units: meters
     example: 6.037
 
-  variable:
-    description: Type of environmental measurement
-    type: categorical
-    categories:
-      - rainfall
-      - dissolved oxygen
-      - evapotranspiration
-      - turbidity
-      - water temperature
-    example: water temperature
+variable:
+  description: Type of environmental measurement relevant to dam and reservoir behaviour
+  type: categorical
+  categories:
+    rainfall: >
+      Precipitation falling onto the reservoir catchment, influencing inflows,
+      storage levels, runoff quality, and flood operations.
+      Taken daily.
+    dissolved oxygen: >
+      Concentration of oxygen dissolved in the water column, critical for aquatic
+      health, stratification dynamics, and treatment considerations.
+    evapotranspiration: >
+      Combined water loss from evaporation and vegetation transpiration, affecting
+      reservoir water balance and long‑term storage trends. Taken daily.
+    turbidity: >
+      Cloudiness of the water caused by suspended particles such as clay, silt,
+      algae, or organic matter; often increases after rainfall and affects
+      treatment processes and ecological conditions.
+    water temperature: >
+      Thermal conditions of the reservoir, influencing stratification, dissolved
+      oxygen levels, algal growth, and operational decisions such as offtake depth.
+  example: water temperature
 
   value:
     description: Recorded value of the environmental variable
