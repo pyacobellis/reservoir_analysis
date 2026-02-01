@@ -1,0 +1,92 @@
+---
+title: "Reservoir / Catchment Health"
+author: "Paul Yacobellis"
+date: "2026-01-31"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: '2'
+  html_document:
+    toc: true
+    toc_depth: 2
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(readxl)
+library(skimr)
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+
+
+reservoir_raw <- readxl::read_excel('scenario_data.xlsx') 
+reservoir_edit <- reservoir_raw
+
+
+```
+
+## Context and Objectives
+
+What are we trying to achieve?
+
+-   Understand reservoir / catchment health data patterns
+-   Identify patterns / risks / anomalies
+-   Recommended monitoring and simple predictive tools
+
+## Data Science Approach
+
+-   Examine data & take hand written notes
+-   Tools:
+    -    Hypothesize in R, Productionise in Python
+    -   Viz: ggplot2, esquisse, patchwork, Streamlit for production
+    -   git for version control <https://github.com/pyacobellis/reservoir_analysis>
+    -   AI - Co-Pilot / ChatGPT, Visual Studio Code
+-   Exploratory Data Analysis
+    -   Data Profile
+    -   Biased Data Detection
+    -   Missing Value Analysis
+    -   Outlier Detection
+-   Analysis
+    -   Diagnostic Signals (Viz) –\>
+    -   Statistical Support –\>
+    -   Predictive Modelling
+-   Sense check intepretations and AI results with SME - flood modeler, engineer, and water economist
+
+\newpage
+
+## Key Insights and Findings
+
+### Key Insight 1: Rain -\> Turbidity Lag Effect
+
+-   Sharp rise in turbidity follows peak rain event
+
+-   CCF Plot supports this relationship
+
+    ![](images/clipboard-505368039.png){width="490"}
+
+![](images/clipboard-2463396709.png){width="578"}
+
+\newpage
+
+### Key Insight 2: Depth Analysis
+
+-   DO stable at 0 - 40m - suggests algal bloom risk lower.
+
+-   Water Temperature increases over time, as temperature would cool?
+
+![](images/clipboard-1712110863.png){width="620"}
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
