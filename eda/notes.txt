@@ -1,0 +1,21 @@
+1.  any standardisation of values considered?
+
+2.  hourly analysis?  too granular
+
+3.  scale of rain peak and turbidity relationship
+
+4.  consider catchment size
+    -same relationships expected in bigger vs smaller catchment
+
+5.  compare to other resivoirs
+
+6.  compare to other years / time periods
+
+7.  spatial analysis of catchement
+        -size
+        -land use cover
+        -
+8.  downstream conditions
+        -what customers
+        -flood zones
+        -etc 
